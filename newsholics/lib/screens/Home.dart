@@ -203,9 +203,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
                     Container(
                       child: ListView.builder(
+                        scrollDirection: Axis.vertical,
                           shrinkWrap: true,
                           physics: ClampingScrollPhysics(),
-                          itemCount: 20,
+                          itemCount: 12,
                           itemBuilder: (context, index) {
                             return BlogTile(
                                 url: articles[index].url!,
@@ -343,7 +344,7 @@ class BlogTile extends StatelessWidget {
                         child: CachedNetworkImage(
                           imageUrl: imageUrl,
                           height: 100,
-                          width: 150,
+                          width: 120,
                           fit: BoxFit.cover,
                         ))),
                 const SizedBox(
@@ -368,8 +369,8 @@ class BlogTile extends StatelessWidget {
                     Container(
                       width: MediaQuery.of(context).size.width / 2,
                       child: Text(
-                        description,
-                        maxLines: 3,
+                        description +"....",
+                        maxLines: 2,
                         style: const TextStyle(
                             color: Colors.black54,
                             fontSize: 16.0,

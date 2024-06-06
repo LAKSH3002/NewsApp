@@ -26,7 +26,7 @@ class _LandingPageState extends State<LandingPage> {
                 child: Image.asset(
                   'Images/health.jpg',
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height / 1.7,
+                  height: MediaQuery.of(context).size.height / 2,
                   fit: BoxFit.cover,
                 ),
               ),
